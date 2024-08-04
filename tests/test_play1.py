@@ -5,7 +5,7 @@ import pytest
 @pytest.fixture(scope='function')
 def browser_context():
     with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=False)
+        browser = playwright.chromium.launch()
         context = browser.new_context()
         yield context
         context.close()
