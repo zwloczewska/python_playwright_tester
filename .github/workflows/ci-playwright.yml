@@ -28,7 +28,7 @@
           run: |
               python -m pip install --upgrade pip
               pip install -r wymagania.txt
-              playwright install
+              playwright install --with deps
 
         - name: Create screenshot directory
           run: |
